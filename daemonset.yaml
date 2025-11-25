@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: webserver
+  name: agent
 spec:
   selector:
     matchLabels:
-      agent: webserver
+      agent: web
   template:
     metadata:
       labels:
-        agent: webserver
+        agent: web
     spec:
       containers:
-      - name: webserver
+      - name: web
         image: nginx
