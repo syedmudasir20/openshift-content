@@ -1,0 +1,16 @@
+piVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: agent
+spec:
+  selector:
+    matchLabels:
+      agent: web
+  template:
+    metadata:
+      labels:
+        agent: web
+    spec:
+      containers:
+      - name: test
+        image: nginx
